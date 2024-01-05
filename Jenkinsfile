@@ -8,5 +8,13 @@ pipeline {
                 sh "node_modules/jslint/bin/jslint.js server.js"
             }
         }
+
+        stage('Generating Artifacts') {
+            steps {
+                sh "echo Generating Artifacts...."
+                sh "npm install && ls -ltr/"
+
+            }
+        }
     }
 }
